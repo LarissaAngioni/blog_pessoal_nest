@@ -40,7 +40,7 @@ export class PostagemController{
 
     @Delete("/:id")
     @HttpCode(HttpStatus.NO_CONTENT)
-    delete(@Param() id: number) {
+    delete(@Param("id") id: number) {
         return this.postagemService.delete(id)
     }
 }
